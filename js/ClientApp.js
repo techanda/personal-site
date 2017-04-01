@@ -2,8 +2,9 @@ import React from 'react'
 import { render } from 'react-dom'
 import { BrowserRouter, Match } from 'react-router'
 import Landing from './Landing'
-// import '../public/normalize.css'
-// import '../public/style.css'
+import '../public/less/common.less'
+import '../node_modules/bootstrap/dist/css/bootstrap.css'
+import '../node_modules/font-awesome/css/font-awesome.css'
 
 const App = React.createClass({
   render () {

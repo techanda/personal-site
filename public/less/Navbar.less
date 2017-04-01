@@ -1,0 +1,67 @@
+@keyframes buttonUnderline {
+  from { width: 0%; }
+    to { width: 100%;}
+}
+
+@keyframes brandColorChange {
+  from { color: @base-color-1; }
+    to { color: @base-color-0; }
+}
+
+@keyframes linkColorChange {
+  from { color: @base-color-3; }
+    to { color: @base-color-2; }
+}
+
+.navbar {
+  z-index:1000;
+  background: @base-color-4!important;
+  border: @base-color-4!important;
+  border-radius: 0!important;
+  font-family: @special-font;
+  margin-bottom: 0!important;
+  a.navbar-brand {
+    color: @base-color-2;
+    font-size: 2em;
+    .name {
+      color: @base-color-1;
+    }
+    &:hover {
+      .name {
+        color: @base-color-0;
+        animation-name: brandColorChange;
+        animation-duration: .5s;
+      }
+    }
+  }
+  ul.navbar-nav {
+    li {
+        a {
+            color: @base-color-3;
+        }
+      &:hover {
+        a {
+          color: @base-color-2;
+          animation-name: linkColorChange;
+          animation-duration: .5s;
+        }
+      }
+    }
+
+    li::after {
+      width:0%;
+      height:4px;
+      background: @base-color-1;
+      content: "";
+      display: block;
+    }
+    li:hover {
+      background: lighten(@base-color-4, 10%);
+      &::after {
+        width:100%;
+        animation-name: buttonUnderline;
+        animation-duration: .25s;
+      }
+    }
+  }
+}

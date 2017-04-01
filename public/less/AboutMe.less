@@ -1,0 +1,35 @@
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn .5s ease-in 1 forwards;
+}
+
+.is-paused {
+  animation-play-state: paused;
+}
+
+.fade-out {
+  opacity: 1;
+  animation: fadeOut .5s ease-in 0 forwards;
+}
+
+
+.gutter-left {
+  padding-top: 25px;
+  .headshot {
+    margin:auto;
+    // margin-top:50px;
+    background:@base-color-1;
+    padding:10px;
+    border-radius: 100%;
+    max-width: 200px!important;
+    img {
+      margin:auto;
+    }
+  }
+}
