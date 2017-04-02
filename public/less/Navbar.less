@@ -3,19 +3,15 @@
     to { width: 100%;}
 }
 
-@keyframes brandColorChange {
-  from { color: @base-color-1; }
-    to { color: @base-color-0; }
-}
-
 @keyframes linkColorChange {
   from { color: @base-color-3; }
     to { color: @base-color-2; }
 }
+.whiteout {
+  color: @base-color-2!important;
+}
 
 .navbar {
-  z-index:1000;
-  background: @base-color-4!important;
   border: @base-color-4!important;
   border-radius: 0!important;
   font-family: @special-font;
@@ -25,12 +21,11 @@
     font-size: 2em;
     .name {
       color: @base-color-1;
+      transition: color .5s;
     }
     &:hover {
       .name {
         color: @base-color-0;
-        animation-name: brandColorChange;
-        animation-duration: .5s;
       }
     }
   }
