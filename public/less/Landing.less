@@ -1,9 +1,6 @@
 .landing {
 }
 div.background-image{
-  // left:0;
-  // right:0;
-  // padding-top:50px;
   z-index: -1;
   width: 100%;
   background-image: url('/public/img/background_1.jpg');
@@ -21,4 +18,18 @@ div.background-image{
   background-image: url('/public/img/img-noise-361x370.png');
   background-repeat: repeat;
   opacity: .8;
+}
+.section-break {
+  position:relative;
+  height:50px;
+  background: @base-color-3;
+  line-height: 50px;
+  text-align: center;
+
+  .fa {
+    padding: 0 15px;
+    &.fa-3x {
+      line-height: 1.2em;
+    }
+  }
 }

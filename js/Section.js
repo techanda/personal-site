@@ -32,7 +32,6 @@ const Section = React.createClass({
     }
     return (
       <div className='container-fluid'>
-        <div className='row section-break' />
         <div className='row section js-fade fade-in is-paused'>
           <div className='hidden-xs col-sm-3 gutter-left'>
             {gutterLeft}

@@ -4,7 +4,7 @@ import { BrowserRouter, Match } from 'react-router'
 import Landing from './Landing'
 import '../public/less/common.less'
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
-import '../node_modules/font-awesome/css/font-awesome.css'
+// import '../node_modules/font-awesome/css/font-awesome.min.css'
 
 const App = React.createClass({
   render () {
