@@ -25,7 +25,7 @@ const Landing = React.createClass({
     document.querySelector(selector).style.background = 'rgba(16, 16, 16, 0.0)'
 
     window.addEventListener('scroll', (event) => {
-      if (window.scrollY > 200) {
+      if (window.scrollY > 100) {
         if (!navbarStatus) {
           fade(selector, 0.0, 1.0)
           navbarStatus = true
@@ -53,7 +53,7 @@ const Landing = React.createClass({
   },
   render () {
     return (
-      <Navbar inverse collapseOnSelect fixedTop className='slide-top slide-paused'>
+      <Navbar inverse collapseOnSelect fixedTop className='slide-top'>
         <Navbar.Header>
           <Navbar.Brand>
             <Link to='#'>{'{'}<span className='name text-whiteout whiteout'>tim.ramsier</span>{'}'}</Link>

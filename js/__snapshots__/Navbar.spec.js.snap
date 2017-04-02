@@ -1,7 +1,7 @@
 exports[`test Navbar snapshot test 1`] = `
 <Uncontrolled(Navbar)
   bsStyle="default"
-  className="slide-top slide-paused"
+  className="slide-top"
   collapseOnSelect={true}
   fixedTop={true}
   inverse={true}>
