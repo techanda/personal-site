@@ -13,9 +13,9 @@ const Landing = React.createClass({
         } else {
           start < end ? opacity = opacity + 0.1 : opacity = opacity - 0.1
           if (start < end) {
-            element.querySelector('.text-whiteout').classList.remove('whiteout')
+            element.querySelector('.text-fade').classList.remove('fadeout')
           } else {
-            element.querySelector('.text-whiteout').classList.add('whiteout')
+            element.querySelector('.text-fade').classList.add('fadeout')
           }
           element.style.background = `rgba(16, 16, 16, ${opacity})`
         }
@@ -55,8 +55,8 @@ const Landing = React.createClass({
     return (
       <Navbar inverse collapseOnSelect fixedTop className='slide-top'>
         <Navbar.Header>
-          <Navbar.Brand>
-            <Link to='#'>{'{'}<span className='name text-whiteout whiteout'>tim.ramsier</span>{'}'}</Link>
+          <Navbar.Brand className='text-fade fadeout'>
+            <Link to='#'>{'{'}<span className='name'>tim.ramsier</span>{'}'}</Link>
           </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>
