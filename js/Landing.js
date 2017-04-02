@@ -4,6 +4,7 @@ import Navbar from './Navbar'
 import Section from './Section'
 import AboutMe from './content/AboutMe'
 import Headshot from './content/Headshot'
+import Social from './Social'
 
 const Landing = React.createClass({
   render () {
@@ -19,7 +20,11 @@ const Landing = React.createClass({
           exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
         />
         </div>
-        <div className='row section-break' />
+        <Social
+          facebook='https://www.facebook.com/tim.ramsier'
+          linkedin='https://www.linkedin.com/in/timothyramsier'
+          github='https://github.com/timramsier'
+        />
         <Section
           anchor='aboutme'
           content={<AboutMe />}
