@@ -5,6 +5,7 @@ import Section from './Section'
 import AboutMe from './content/AboutMe'
 import Headshot from './content/Headshot'
 import Social from './Social'
+import MyValues from './MyValues'
 
 const Landing = React.createClass({
   parallax (selector) {
