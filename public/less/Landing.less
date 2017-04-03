@@ -1,26 +1,32 @@
 .landing {
 }
-div.background-image{
-  z-index: -1;
+.background-image{
   width: 100%;
   background-image: url('/public/img/background_1.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position:relative;
-  min-height: 500px;
-}
-.grain-overlay {
-  z-index:-1;
-  width:100%;
-  height: 100%;
-  position: absolute;
-  background-image: url('/public/img/img-noise-361x370.png');
-  background-repeat: repeat;
-  opacity: .8;
+  position:fixed;
+  height: 100vh;
+  opacity: 0.1;
 }
 .section-break {
   position:relative;
   background: @base-color-3;
   text-align:left;
+}
+.img-backdrop {
+  position: fixed;
+  z-index: -1;
+  background: @base-color-4!important;
+  width: 100%;
+  height: 100vh;
+}
+.backdrop {
+  background: @base-color-2;
+}
+.parallax {
+  display: block;
+  z-index: -1;
+  position: fixed;
 }

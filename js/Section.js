@@ -31,7 +31,7 @@ const Section = React.createClass({
       gutterRight = this.props.gutterRight
     }
     return (
-      <div className='container-fluid'>
+      <div className='container-fluid backdrop'>
         <div className='row section js-fade fade-in is-paused'>
           <div className='hidden-xs col-sm-3 gutter-left'>
             {gutterLeft}
