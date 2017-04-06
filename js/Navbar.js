@@ -46,7 +46,12 @@ const Landing = React.createClass({
       var target = element.querySelector('a').getAttribute('href')
       if (target.startsWith('#')) {
         element.addEventListener('click', () => {
-          document.querySelector(`${target}`).scrollIntoView()
+          document.querySelector(`${target}`).scrollIntoView(
+            {
+              behavior: 'smooth',
+              block: 'start'
+            }
+          )
         })
       }
     })
