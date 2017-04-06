@@ -29,12 +29,16 @@ const Landing = React.createClass({
           <div className='background-image' />
           <div className='img-backdrop' />
         </div>
-        <Jumbotron
-          header='I can do things!'
-          message='Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-        />
+        <div className='hero-section'>
+          <div className='vertical-align'>
+            <Jumbotron
+              header='I can do things!'
+              message='Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+            />
+          </div>
+        </div>
         <Social
           facebook='https://www.facebook.com/tim.ramsier'
           linkedin='https://www.linkedin.com/in/timothyramsier'
@@ -46,6 +50,7 @@ const Landing = React.createClass({
           title='About Me'
           gutterLeft={<Headshot />}
         />
+        <MyValues />
       </div>
     )
   }

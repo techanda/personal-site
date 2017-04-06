@@ -63,8 +63,9 @@ const Landing = React.createClass({
         <Navbar.Collapse>
           <Nav pullRight>
             <NavItem eventKey={1} href='#aboutme'>About Me</NavItem>
-            <NavItem eventKey={2} href='#'>My Skills</NavItem>
-            <NavItem eventKey={3} href='#'>Contact Me</NavItem>
+            <NavItem eventKey={2} href='#myvalues'>My Values</NavItem>
+            <NavItem eventKey={3} href='#'>My Skills</NavItem>
+            <NavItem eventKey={4} href='#'>Contact Me</NavItem>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
