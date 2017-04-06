@@ -12,11 +12,13 @@ const Section = React.createClass({
   },
   componentDidMount () {
     window.addEventListener('scroll', (event) => {
-      var headshotBottom = document.querySelector('.js-fade').getBoundingClientRect().bottom
+      var breakRatio = window.innerWidth < 768 ? 2.5 : 1.5
+      var element = document.querySelector('.section .js-fade')
+      var parent = element.parentElement
+      var bottom = parent.getBoundingClientRect().bottom
       var pageBottom = window.scrollY + window.innerHeight
-      // console.log(`${Math.round(headshotBottom)} <> ${Math.round(pageBottom)}`)
-      if (pageBottom > headshotBottom) {
-        document.querySelector('.js-fade').classList.remove('is-paused')
+      if (pageBottom > bottom + window.scrollY / breakRatio) {
+        document.querySelector('.section .js-fade').classList.remove('is-paused')
       }
     })
   },
@@ -31,19 +33,23 @@ const Section = React.createClass({
       gutterRight = this.props.gutterRight
     }
     return (
-      <div className='container-fluid backdrop'>
-        <div className='row section js-fade fade-in is-paused'>
-          <div className='hidden-xs col-sm-3 gutter-left'>
-            {gutterLeft}
-          </div>
-          <div className='col-sm-6'>
-            <section id={anchor}>
-              <h2>{title}</h2>
-              {content}
-            </section>
-          </div>
-          <div className='hidden-xs col-sm-3 gutter-right'>
-            {gutterRight}
+      <div className='section'>
+        <div className='container'>
+          <h1>{title}</h1>
+          <div className='row js-fade fade-in is-paused'>
+            <div className='hidden-xs col-sm-3 gutter-left'>
+              {gutterLeft}
+            </div>
+            <div className='section-content'>
+              <div className='col-sm-6'>
+                <section id={anchor}>
+                  {content}
+                </section>
+              </div>
+            </div>
+            <div className='hidden-xs col-sm-3 gutter-right'>
+              {gutterRight}
+            </div>
           </div>
         </div>
       </div>

@@ -1,0 +1,71 @@
+.value {
+  .arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid @base-color-2;
+    margin:auto;
+    margin-bottom: 10px;
+  }
+  .value-image {
+    margin: auto;
+    width:100%;
+    text-align: center;
+    font-size: 80px;
+    color: lighten(@base-color-4, 50%);
+    background:@base-color-2;
+    padding: 25px 0;
+    border-radius: 30px;
+    img{
+      max-height: 300px;
+      margin:auto;
+    }
+  }
+  .value-content {
+    background: darken(@base-color-2, 10%);
+    border-radius: 30px;
+    padding:10px;
+    margin-bottom:30px;
+  }
+  h2 {
+    text-align: center;
+    width:100%;
+    padding: 3px 0;
+  }
+  p {
+    text-align: justify;
+  }
+}
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {
+  .value {
+    .value-image {
+      img {
+        max-height: 150px;
+        margin:auto;
+      }
+    }
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) {
+  .value {
+    .value-image {
+      img {
+        max-height: 200px;
+        margin:auto;
+      }
+    }
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) {
+
+}

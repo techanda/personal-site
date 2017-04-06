@@ -6,6 +6,8 @@
 @import 'Section.less';
 @import 'AboutMe.less';
 @import 'Social.less';
+@import 'MyValues.less';
+@import 'Value.less';
 
 .app {
   height: 100vh;
@@ -15,5 +17,11 @@
   }
 }
 body {
-  background: #331a00!important;
+  background: @base-color-4!important;
+}
+.container, .container-fluid {
+  z-index: 2;
+}
+.backdrop {
+  background: @base-color-2;
 }
