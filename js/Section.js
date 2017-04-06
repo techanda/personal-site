@@ -12,12 +12,12 @@ const Section = React.createClass({
   },
   componentDidMount () {
     window.addEventListener('scroll', (event) => {
-      var breakRatio = window.innerWidth < 768 ? 2.5 : 1.5
+      var breakRatio = window.innerWidth < 768 ? 2 : 1.1
       var element = document.querySelector('.section .js-fade')
       var parent = element.parentElement
       var bottom = parent.getBoundingClientRect().bottom
       var pageBottom = window.scrollY + window.innerHeight
-      if (pageBottom > bottom + window.scrollY / breakRatio) {
+      if (pageBottom > (bottom + window.scrollY) / breakRatio) {
         document.querySelector('.section .js-fade').classList.remove('is-paused')
       }
     })
@@ -35,20 +35,22 @@ const Section = React.createClass({
     return (
       <div className='section'>
         <div className='container'>
-          <h1>{title}</h1>
-          <div className='row js-fade fade-in is-paused'>
-            <div className='hidden-xs col-sm-3 gutter-left'>
-              {gutterLeft}
-            </div>
-            <div className='section-content'>
-              <div className='col-sm-6'>
-                <section id={anchor}>
-                  {content}
-                </section>
+          <div className='js-fade fade-in is-paused'>
+            <h1 id={anchor}>{title}</h1>
+            <div className='row'>
+              <div className='hidden-xs col-sm-3 gutter-left'>
+                {gutterLeft}
               </div>
-            </div>
-            <div className='hidden-xs col-sm-3 gutter-right'>
-              {gutterRight}
+              <div className='section-content'>
+                <div className='col-sm-6'>
+                  <section>
+                    {content}
+                  </section>
+                </div>
+              </div>
+              <div className='hidden-xs col-sm-3 gutter-right'>
+                {gutterRight}
+              </div>
             </div>
           </div>
         </div>

@@ -4,13 +4,13 @@ import Value from './Value'
 const MyValues = React.createClass({
   componentDidMount () {
     window.addEventListener('scroll', (event) => {
-      var breakRatio = window.innerWidth < 768 ? 2.5 : 1.5
+      var breakRatio = window.innerWidth < 768 ? 2 : 1.25
       console.log(breakRatio)
       var element = document.querySelector('.myvalues .js-fade')
       var parent = element.parentElement
       var bottom = parent.getBoundingClientRect().bottom
       var pageBottom = window.scrollY + window.innerHeight
-      if (pageBottom > bottom + window.scrollY / breakRatio) {
+      if (pageBottom > (bottom + window.scrollY) / breakRatio) {
         document.querySelector('.myvalues .js-fade').classList.remove('is-paused')
       }
     })
@@ -22,7 +22,7 @@ const MyValues = React.createClass({
           <h1>My Core Values</h1>
           <div className='row'>
             <Value
-              image='book.png'
+              image='book_dark.png'
               value='Curiosity'
               explanation=' Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -31,7 +31,7 @@ const MyValues = React.createClass({
                             reprehenderit in voluptate velit.'
             />
             <Value
-              image='laptop_2.png'
+              image='laptop_dark.png'
               value='Creativity'
               explanation=' Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -40,7 +40,7 @@ const MyValues = React.createClass({
                             reprehenderit in voluptate velit.'
             />
             <Value
-              image='whiteboard.png'
+              image='whiteboard_dark.png'
               value='Growth'
               explanation=' Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
