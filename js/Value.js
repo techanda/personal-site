@@ -7,6 +7,7 @@ const Value = React.createClass({
     value: string,
     explanation: string,
     faIcon: string,
+    glyphicon: string,
     image: string
   },
   render () {
@@ -16,8 +17,7 @@ const Value = React.createClass({
     let image
     if (this.props.image) {
       image = <img className='img-responsive' src={`/public/img/${this.props.image}`} />
-    }
-    else if (this.props.glyphicon) {
+    } else if (this.props.glyphicon) {
       glyphicon = <span className={`glyphicon ${this.props.glyphicon}`} aria-hidden='true' />
     } else if (this.props.faIcon) {
       faIcon = <i className={`fa ${this.props.faIcon}`} aria-hidden='true' />
