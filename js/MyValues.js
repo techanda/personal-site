@@ -22,7 +22,7 @@ const MyValues = React.createClass({
           <h1>My Core Values</h1>
           <div className='row'>
             <Value
-              image='book_dark.png'
+              image='book_sketch.png'
               value='Curiosity'
               explanation=' Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -31,7 +31,7 @@ const MyValues = React.createClass({
                             reprehenderit in voluptate velit.'
             />
             <Value
-              image='laptop_dark.png'
+              image='laptop_sketch.png'
               value='Creativity'
               explanation=' Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -40,7 +40,7 @@ const MyValues = React.createClass({
                             reprehenderit in voluptate velit.'
             />
             <Value
-              image='whiteboard_dark.png'
+              image='whiteboard_sketch.png'
               value='Growth'
               explanation=' Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
