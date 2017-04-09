@@ -1,18 +1,15 @@
 import React from 'react'
 import Jumbotron from './Jumbotron'
 import Navbar from './Navbar'
-import Section from './Section'
-import AboutMe from './content/AboutMe'
-import Headshot from './content/Headshot'
+import AboutMe from './AboutMe'
 import Social from './Social'
 import MyValues from './MyValues'
+require('smoothscroll-polyfill').polyfill()
 
 const Landing = React.createClass({
   parallax (selector) {
     var paraScroll = (selector) => {
-      document.querySelectorAll(selector).forEach((element) => {
-        element.style.top = `-${Math.round(window.scrollY / 3)}px`
-      })
+      document.querySelector(selector).style.top = `-${Math.round(window.scrollY / 3)}px`
     }
     window.addEventListener('scroll', (event) => {
       paraScroll(selector)
@@ -44,12 +41,7 @@ const Landing = React.createClass({
           linkedin='https://www.linkedin.com/in/timothyramsier'
           github='https://github.com/timramsier'
         />
-        <Section
-          anchor='aboutme'
-          content={<AboutMe />}
-          title='About Me'
-          gutterLeft={<Headshot />}
-        />
+        <AboutMe />
         <MyValues />
       </div>
     )

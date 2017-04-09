@@ -1,42 +1,49 @@
-.background-image{
-  position:relative;
-  width: 100%;
-  background-image: url('/public/img/background_3.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position:fixed;
-  height: 100vh;
-  z-index: -1;
-}
-.section-break {
-  display: block;
-  position:relative;
-  background: @base-color-1;
-  text-align:left;
-}
-.img-overlay {
-  opacity: 0.9;
-  position: fixed;
-  background: @base-color-4!important;
-  width: 100%;
-  height: 100vh;
-  z-index: 1;
-}
-.parallax {
-  width:100%;
-  display: block;
-  // z-index: -1;
-  position: absolute;
-}
-.hero-section {
-  min-height: 100vh;
-  display: table;
-  vertical-align: middle;
-  width: 100%;
-  .vertical-align {
-    margin:auto;
-    display: table-cell;
+.landing {
+  .background-image{
+    position:relative;
+    width: 100%;
+    background-image: url('/public/img/background_3.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:fixed;
+    height: 100vh;
+    z-index: -1;
+    filter: sepia(60%;);
+  }
+  .section-break {
+    display: block;
+    position:relative;
+    background: @base-color-1;
+    text-align:left;
+  }
+  .img-overlay {
+    opacity: 0.9;
+    position: fixed;
+    background: @base-color-4!important;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+  }
+  .parallax {
+    width:100%;
+    display: block;
+    // z-index: -1;
+    position: absolute;
+  }
+  .hero-section {
+    min-height: 100vh;
+    display: table;
     vertical-align: middle;
+    width: 100%;
+    .vertical-align {
+      margin:auto;
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+
+  p {
+    font-size: 1.25em;
   }
 }
