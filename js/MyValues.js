@@ -5,7 +5,6 @@ const MyValues = React.createClass({
   componentDidMount () {
     window.addEventListener('scroll', (event) => {
       var breakRatio = window.innerWidth < 768 ? 2 : 1.25
-      console.log(breakRatio)
       var element = document.querySelector('.myvalues .js-fade')
       var parent = element.parentElement
       var bottom = parent.getBoundingClientRect().bottom
