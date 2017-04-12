@@ -29,6 +29,7 @@ const Section = React.createClass({
                 <div className='col-sm-6'>
                   <section>
                     <article>
+                      <h2>Who I am</h2>
                       <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim

@@ -23,6 +23,16 @@
   font-family: @special-font;
   font-size:1.5em;
   margin-bottom: 0!important;
+  .brandImg {
+    height: 100%;
+    transition: filter .25s;
+    &:hover {
+      filter: saturate(150%);
+    }
+  }
+  a {
+    padding: 5px 2px 2px 2px;
+  }
   a.navbar-brand {
     color: @base-color-2;
     font-size: 2em;

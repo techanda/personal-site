@@ -12,12 +12,14 @@ const Jumbo = React.createClass({
     return (
       <div className='container'>
         <div className='row'>
-          <Jumbotron>
-            <h1>{header}</h1>
-            <p>
-              {message}
-            </p>
-          </Jumbotron>
+          <div className='col-md-8'>
+            <Jumbotron>
+              <h1>{header}</h1>
+              <p>
+                {message}
+              </p>
+            </Jumbotron>
+          </div>
         </div>
       </div>
     )

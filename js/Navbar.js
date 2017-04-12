@@ -58,10 +58,13 @@ const Landing = React.createClass({
   },
   render () {
     return (
-      <Navbar inverse collapseOnSelect fixedTop className='slide-top'>
+      <Navbar inverse collapseOnSelect fixedTop className='slide-top' id='top'>
         <Navbar.Header>
           <Navbar.Brand className='text-fade fadeout'>
-            <Link to='#'>{'{'}<span className='name'>tim.ramsier</span>{'}'}</Link>
+            <Link to='#top'>
+              {/* {'{'}<span className='name'>tim.ramsier</span>{'}'} */}
+              <img className='brandImg' src='/public/img/tim_ramsier_wide.png' />
+            </Link>
           </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>
