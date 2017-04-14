@@ -1,0 +1,54 @@
+.SkillCard {
+  .SkillCardImage {
+    // background: lighten(@base-color-4, 10%);
+    min-height: 120px;
+    width: 100%;
+    padding:15px 30px;
+    text-align: center;
+    img {
+      max-width: 50%;
+      margin:auto;
+      max-height: 100px;
+    }
+  }
+  padding: 15px;
+  margin: 2%;
+  display: block;
+  width: 96%;
+  color: @base-color-2;
+  text-align: center;
+}
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {
+  .SkillCard {
+    margin: 0 2%;
+    display: inline-block;
+    width: 45.33%;
+    .SkillCardImage {
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) {
+  .SkillCard {
+    margin: 0 2%;
+    display: inline-block;
+    width: 29.33%;
+    .SkillCardImage {
+      padding:15px 30px;
+    }
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) {
+
+}
