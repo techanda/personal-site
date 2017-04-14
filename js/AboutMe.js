@@ -1,24 +1,20 @@
 import React from 'react'
 
+const { func } = React.PropTypes
+
 const Section = React.createClass({
+  propTypes: {
+    fadeInSection: func
+  },
   componentDidMount () {
-    window.addEventListener('scroll', (event) => {
-      var breakRatio = window.innerWidth < 768 ? 2 : 1.1
-      var element = document.querySelector('.section .js-fade')
-      var parent = element.parentElement
-      var bottom = parent.getBoundingClientRect().bottom
-      var pageBottom = window.scrollY + window.innerHeight
-      if (pageBottom > (bottom + window.scrollY) / breakRatio) {
-        document.querySelector('.section .js-fade').classList.remove('is-paused')
-      }
-    })
+    this.props.fadeInSection('#aboutme')
   },
   render () {
     return (
-      <div className='section'>
+      <div id='aboutme'>
         <div className='container'>
           <div className='js-fade fade-in is-paused'>
-            <h1 id='aboutme'>About Me</h1>
+            <h1>About Me</h1>
             <div className='row'>
               <div className='hidden-xs col-sm-3 gutter-left'>
                 <div className='headshot'>

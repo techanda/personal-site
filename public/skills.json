@@ -1,0 +1,28 @@
+{
+  "skills" : [
+    {
+      "id" : "1",
+      "image" : "nodejs-new-pantone-white.png",
+      "skill" : "node.js",
+      "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+    },
+    {
+      "id" : "2",
+      "image" : "reactjs.svg",
+      "skill" : "React",
+      "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+    },
+    {
+      "id" : "3",
+      "image" : "jquery_dark.png",
+      "skill" : "jQuery",
+      "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+    },
+    {
+      "id" : "4",
+      "image" : "lesscss.png",
+      "skill" : "Less",
+      "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+    }
+  ]
+}

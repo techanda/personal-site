@@ -1,18 +1,14 @@
 import React from 'react'
 import Value from './Value'
 
+const { func } = React.PropTypes
+
 const MyValues = React.createClass({
+  propTypes: {
+    fadeInSection: func
+  },
   componentDidMount () {
-    window.addEventListener('scroll', (event) => {
-      var breakRatio = window.innerWidth < 768 ? 2 : 1.25
-      var element = document.querySelector('.myvalues .js-fade')
-      var parent = element.parentElement
-      var bottom = parent.getBoundingClientRect().bottom
-      var pageBottom = window.scrollY + window.innerHeight
-      if (pageBottom > (bottom + window.scrollY) / breakRatio) {
-        document.querySelector('.myvalues .js-fade').classList.remove('is-paused')
-      }
-    })
+    this.props.fadeInSection('#myvalues')
   },
   render () {
     return (

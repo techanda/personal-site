@@ -4,6 +4,7 @@ import Navbar from './Navbar'
 import AboutMe from './AboutMe'
 import Social from './Social'
 import MyValues from './MyValues'
+import MySkills from './MySkills'
 require('smoothscroll-polyfill').polyfill()
 
 const Landing = React.createClass({
@@ -15,10 +16,24 @@ const Landing = React.createClass({
       paraScroll(selector)
     })
   },
+  fadeInSection (selector) {
+    window.addEventListener('scroll', (event) => {
+      var breakRatio = window.innerWidth < 768 ? 2 : 1.25
+      var element = document.querySelector(`${selector} .js-fade`)
+      var parent = element.parentElement
+      var bottom = parent.getBoundingClientRect().bottom
+      var pageBottom = window.scrollY + window.innerHeight
+      if (pageBottom > (bottom + window.scrollY) / breakRatio) {
+        document.querySelector(`${selector} .js-fade`).classList.remove('is-paused')
+      }
+    })
+  },
   componentDidMount () {
     this.parallax('.parallax')
   },
   render () {
+    const fadeInSection = this.fadeInSection
+    const { skills } = this.props
     return (
       <div className='landing'>
         <Navbar />
@@ -41,8 +56,9 @@ const Landing = React.createClass({
           linkedin='https://www.linkedin.com/in/timothyramsier'
           github='https://github.com/timramsier'
         />
-        <AboutMe />
-        <MyValues />
+        <AboutMe fadeInSection={fadeInSection} />
+        <MyValues fadeInSection={fadeInSection} />
+        <MySkills fadeInSection={fadeInSection} skills={skills} />
       </div>
     )
   }
