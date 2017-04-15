@@ -23,6 +23,12 @@
       "image" : "lesscss.png",
       "skill" : "Less",
       "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+    },
+    {
+      "id" : "5",
+      "image" : "Solutions-Architect-Associate.png",
+      "skill" : "Amazon Web Services",
+      "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
     }
   ]
 }

@@ -5,9 +5,20 @@ import AboutMe from './AboutMe'
 import Social from './Social'
 import MyValues from './MyValues'
 import MySkills from './MySkills'
+
 require('smoothscroll-polyfill').polyfill()
 
+const { shape, string, arrayOf } = React.PropTypes
+
 const Landing = React.createClass({
+  propTypes: {
+    skills: arrayOf(shape({
+      id: string,
+      image: string,
+      skill: string,
+      description: string
+    }))
+  },
   parallax (selector) {
     var paraScroll = (selector) => {
       document.querySelector(selector).style.top = `-${Math.round(window.scrollY / 3)}px`
@@ -44,7 +55,7 @@ const Landing = React.createClass({
         <div className='hero-section'>
           <div className='vertical-align'>
             <Jumbotron
-              header='I can do things!'
+              header='Hello.'
               message='Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
             exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
