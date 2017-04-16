@@ -1,15 +1,63 @@
-@keyframes dropDown {
-  from {
+@-webkit-keyframes dropDown {
+  0% {
     // background: #fbfbfb;
     opacity: 0.0;
-    transform: translate(0,-150px);
+    -webkit-transform: translateY(-150px);
     border-radius:50%;
   }
-  10% {
+  100% {
+    top: 0;
+    background: none;
+  }
+}
+
+@-moz-keyframes dropDown {
+  0% {
     // background: #fbfbfb;
+    opacity: 0.0;
+    -moz-transform: translateY(-150px);
     border-radius:50%;
   }
-  to {
+  100% {
+    background: none;
+  }
+}
+
+@-o-keyframes dropDown {
+  0% {
+    // background: #fbfbfb;
+    opacity: 0.0;
+    -o-transform: translateY(-150px);
+    border-radius:50%;
+  }
+  100% {
+    top: 0;
+    background: none;
+  }
+}
+
+@-ms-keyframes dropDown {
+  0% {
+    // background: #fbfbfb;
+    opacity: 0.0;
+    -ms-transform: translateY(-150px);
+    border-radius:50%;
+  }
+  100% {
+    top: 0;
+    background: none;
+  }
+}
+
+@keyframes dropDown {
+  0% {
+    // background: #fbfbfb;
+    opacity: 0.0;
+    // transform: translate(0,-150px);
+    top: -150px;
+    border-radius:50%;
+  }
+  100% {
     top: 0;
     background: none;
   }
@@ -56,11 +104,15 @@
   }
   .letter {
     display: inline-block;
-    padding: 5px 0px;
-    transition: padding 1s;
+    padding: 5px 2px;
+    transition: padding 1s, top 2s, opacity 2s;
   }
 
   .animation .letter {
+    -webkit-animation: dropDown 2s;
+    -moz-animation: dropDown 2s;
+    -ms-animation: dropDown 2s;
+    -o-animation: dropDown 2s;
     animation: dropDown 2s;
     position: relative;
   }

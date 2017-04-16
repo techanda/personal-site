@@ -63,7 +63,7 @@ const Landing = React.createClass({
           <Navbar.Brand className='text-fade fadeout'>
             <Link to='#top'>
               {/* {'{'}<span className='name'>tim.ramsier</span>{'}'} */}
-              <img className='brandImg' src='/public/img/tr_monogram.png' />
+              <img className='brandImg' src='/public/img/tr_monogram_w_name.png' />
             </Link>
           </Navbar.Brand>
           <Navbar.Toggle />
