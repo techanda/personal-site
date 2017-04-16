@@ -13,6 +13,8 @@ const Jumbo = React.createClass({
       let empty
       if (letter === ' ') {
         empty = 'empty-letter'
+      } else {
+        empty = ''
       }
       return (
         `<span class='letter expanded-letter ${empty} is-paused'>${letter}</span>`
