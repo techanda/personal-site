@@ -1,66 +1,57 @@
 @-webkit-keyframes dropDown {
   0% {
-    // background: #fbfbfb;
     opacity: 0.0;
-    -webkit-transform: translateY(-150px);
-    border-radius:50%;
+    top: -150px;
   }
   100% {
     top: 0;
-    background: none;
   }
 }
 
 @-moz-keyframes dropDown {
   0% {
-    // background: #fbfbfb;
     opacity: 0.0;
-    -moz-transform: translateY(-150px);
-    border-radius:50%;
+    top: -150px;
   }
   100% {
-    background: none;
+    top: 0;
   }
 }
 
 @-o-keyframes dropDown {
   0% {
-    // background: #fbfbfb;
     opacity: 0.0;
-    -o-transform: translateY(-150px);
-    border-radius:50%;
+    top: -150px;
   }
   100% {
     top: 0;
-    background: none;
   }
 }
 
 @-ms-keyframes dropDown {
   0% {
-    // background: #fbfbfb;
     opacity: 0.0;
-    -ms-transform: translateY(-150px);
-    border-radius:50%;
+    top: -150px;
   }
   100% {
     top: 0;
-    background: none;
   }
 }
 
 @keyframes dropDown {
   0% {
-    // background: #fbfbfb;
     opacity: 0.0;
-    // transform: translate(0,-150px);
     top: -150px;
-    border-radius:50%;
   }
   100% {
     top: 0;
-    background: none;
   }
+}
+
+@keyframes arrowhover {
+    0 {transform: translate(0,0);}
+    50% {transform: translate(0,15px);}
+    100% {transform: translate(0,0);}
 }
 
 .jumbotron {
@@ -107,7 +98,6 @@
     padding: 5px 2px;
     transition: padding 1s, top 2s, opacity 2s;
   }
-
   .animation .letter {
     -webkit-animation: dropDown 2s;
     -moz-animation: dropDown 2s;
@@ -115,5 +105,15 @@
     -o-animation: dropDown 2s;
     animation: dropDown 2s;
     position: relative;
+  }
+}
+.downarrow {
+  display: block;
+  text-align: center;
+  img {
+    animation: arrowhover 2s 0s linear infinite;
+    width: 50px;
+    opacity: 0.0;
+    transition: opacity 2s;
   }
 }
