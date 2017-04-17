@@ -3,10 +3,6 @@
     to { width: 100%;}
 }
 
-@keyframes linkColorChange {
-  from { color: @base-color-3; }
-    to { color: @base-color-2; }
-}
 .fadeout {
   opacity: 0.15;
   &:hover {
@@ -18,9 +14,9 @@
 }
 
 .navbar {
-  border: @base-color-4!important;
+  border: @navbar-background-color!important;
   border-radius: 0!important;
-  font-family: @special-font;
+  font-family: @header-font;
   font-size:1.5em;
   margin-bottom: 0!important;
   .brandImg {
@@ -34,27 +30,18 @@
     padding: 5px 2px 2px 2px;
   }
   a.navbar-brand {
-    color: @base-color-2;
+    color: @light-text-color;
     font-size: 2em;
-    .name {
-      color: @base-color-1;
-    }
-    &:hover {
-      .name {
-        color: @base-color-0;
-      }
-    }
   }
   ul.navbar-nav {
     li {
         a {
-            color: @base-color-3;
+            color: darken(@light-text-color, 20%);
+            transition: color .5s;
         }
       &:hover {
         a {
-          color: @base-color-2;
-          animation-name: linkColorChange;
-          animation-duration: .5s;
+          color: @light-text-color;
         }
       }
     }
@@ -62,12 +49,12 @@
     li::after {
       width:0%;
       height:4px;
-      background: @base-color-1;
+      background: @navbar-hover-line-color;
       content: "";
       display: block;
     }
     li:hover {
-      background: fade(lighten(@base-color-4, 10%), 60%);
+      background: fade(lighten(@navbar-background-color, 10%), 60%);
       &::after {
         width:100%;
         animation-name: buttonUnderline;
@@ -80,13 +67,9 @@
 
 @media (max-width: @screen-sm-min) {
   .navbar {
-    background:rgba(16, 16, 16, 1.0)!important;
+    background:rgba(16, 16, 16, 1.0)!important; //needs to be resolved
     a.navbar-brand {
       opacity: 1.0!important;
-    }
-
-    .name {
-      color: @base-color-1!important;
     }
   }
 }

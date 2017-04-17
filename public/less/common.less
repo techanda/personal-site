@@ -1,6 +1,7 @@
 // @import url('https://fonts.googleapis.com/css?family=Oleo+Script:400,700|Roboto:300,300i,400,400i,700,700i');
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Fredericka+the+Great|Open+Sans+Condensed:300,300i,700');
 @import 'variables.less';
+@import 'mapping.less';
 @import 'Landing.less';
 @import 'Navbar.less';
 @import 'Jumbotron.less';
@@ -13,19 +14,16 @@
 
 .app {
   height: 100vh;
-  font-family: @standard-font;
+  font-family: @paragraph-font;
   h1, h2, h3, h4, h5{
-    font-family: @special-font;
+    font-family: @header-font;
   }
 }
 body {
-  background: @base-color-4!important;
+  background: @body-background-color!important;
 }
 .container, .container-fluid {
   z-index: 2;
-}
-.backdrop {
-  background: @base-color-2;
 }
 
 html {
