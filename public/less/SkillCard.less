@@ -1,22 +1,86 @@
-.SkillCard {
-  .SkillCardImage {
-    // background: lighten(@base-color-4, 10%);
-    min-height: 120px;
-    width: 100%;
-    padding:15px 30px;
-    text-align: center;
-    img {
-      max-width: 50%;
-      margin:auto;
-      max-height: 100px;
-    }
+@keyframes fillIn {
+  0% {
+    width: 0%;
+    height: 0%;
+    background: lighten(@dark-background-color, 15%);
   }
+  100% {
+    width: 100%;
+    height: 100%;
+    background: lighten(@dark-background-color, 15%);
+    border-radius: 30px;
+  }
+}
+@keyframes removeFill {
+  0% {
+    width: 100%;
+    height: 100%;
+    background: lighten(@dark-background-color, 15%);
+    border-radius: 30px;
+  }
+  100% {
+    width: 0%;
+    height: 0%;
+    background: lighten(@dark-background-color, 15%);
+  }
+}
+
+.SkillCard {
+  position:relative;
+  background: lighten(@dark-background-color, 10%);
+  border-radius: 15px;
   padding: 15px;
-  margin: 2%;
+  margin: 15px 2%;
   display: block;
   width: 96%;
   color: @light-text-color;
   text-align: center;
+  margin-top: 30px!important;
+  .SkillCardContent {
+    position: relative;
+    z-index: 1;
+  }
+  .SkillCardImage {
+    position: relative;
+    z-index: 1;
+    min-height: 120px;
+    width: 100%;
+    padding:15px 30px;
+    text-align: center;
+    position: relative;
+    img {
+      max-width: 50%;
+      margin:auto;
+      max-height: 100px;
+      position:absolute;
+      width:80%;
+      top:0;
+      bottom:0;
+      left:0;
+      right:0;
+    }
+  }
+
+  &::after {
+    animation: removeFill .2s ease;
+    display: inline;
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin:auto;
+  }
+  &:hover {
+    transition-delay: .3s;
+    background:lighten(@dark-background-color, 15%);
+    &::after {
+      animation: fillIn ease .3s;
+    }
+  }
+
 }
 
 /* Extra small devices (phones, less than 768px) */
