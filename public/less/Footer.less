@@ -1,0 +1,41 @@
+#footer {
+  padding: 80px 0;
+  background: @footer-background-color;
+  color: @light-text-color;
+  .container {
+    border-top: 2px solid lighten(@footer-background-color, 10%);
+  }
+  .footer {
+    margin-top:15px;
+    text-align: center;
+    font-size: 16px;
+    display: inline-block;
+    &-right {
+      float: right;
+    }
+    &-left {
+      float: left;
+    }
+    &-center {
+      position: relative;
+      width:100%;
+      text-align: center;
+    }
+    a:hover {
+      .fa {
+        background: darken(@light-text-color, 20%)
+      }
+    }
+    .fa {
+      background: @light-text-color;
+      color: @footer-background-color;
+      font-size: 1.3em;
+      height: 1.2em;
+      width:1.2em;
+      margin:.25em;
+      text-align: center;
+      line-height: 1.3em;
+      border-radius: .2em;
+    }
+  }
+}

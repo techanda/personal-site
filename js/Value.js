@@ -30,8 +30,8 @@ const Value = React.createClass({
             {glyphicon}
             {faIcon}
           </div>
-          <div className='arrow-down' />
           <div className='value-content'>
+            <div className='arrow-down' />
             <h2>{value}</h2>
             <p>{explanation}</p>
           </div>

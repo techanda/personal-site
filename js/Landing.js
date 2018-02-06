@@ -5,6 +5,7 @@ import AboutMe from './AboutMe'
 import Social from './Social'
 import MyValues from './MyValues'
 import MySkills from './MySkills'
+import Footer from './Footer'
 
 require('smoothscroll-polyfill').polyfill()
 
@@ -70,6 +71,7 @@ const Landing = React.createClass({
         <AboutMe fadeInSection={fadeInSection} />
         <MyValues fadeInSection={fadeInSection} />
         <MySkills fadeInSection={fadeInSection} skills={skills} />
+        <Footer />
       </div>
     )
   }
